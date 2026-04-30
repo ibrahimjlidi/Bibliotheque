@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Custom button styles */
+  .btn {
+    @apply font-semibold py-2 px-4 rounded-md transition duration-200 shadow-md;
+  }
+
+  .btn-blue {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+
+  .btn-purple {
+    @apply bg-purple-600 hover:bg-purple-700 text-white;
+  }
+
+  .btn-outline-blue {
+    @apply border border-blue-600 text-blue-700 bg-white hover:bg-blue-50;
+  }
+
+  /* Custom input field */
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 transition;
+  }
+
+  .input-blue {
+    @apply input focus:ring-blue-400;
+  }
+
+  .input-purple {
+    @apply input focus:ring-purple-400;
+  }
+
+  /* Animation for fade-in */
+  .animate-fadeIn {
+    @apply opacity-0 animate-[fadeIn_0.8s_ease-out_forwards];
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
